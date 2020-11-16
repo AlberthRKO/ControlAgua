@@ -1,16 +1,16 @@
 /*=========================================================================================
-	File Name: toastr.js
-	Description: Toastr notifications
-	----------------------------------------------------------------------------------------
-	Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-	Author: Pixinvent
-	Author URL: hhttp://www.themeforest.net/user/pixinvent
+  File Name: toastr.js
+  Description: Toastr notifications
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
+  Author: Pixinvent
+  Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 $(document).ready(function () {
 
   // Success Type
   $('#type-success').on('click', function () {
-    toastr.success('Have fun storming the castle!', 'Miracle Max Says');
+    toastr.success('El registro se ha guardado de forma correcta!', 'Registro Exitoso !');
   });
 
   // Info Type
