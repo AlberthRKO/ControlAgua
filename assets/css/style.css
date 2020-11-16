@@ -1,3 +1,17 @@
 .navbar-wrapper .navbar-nav .pt-1{
 	padding-top: 0.6rem !important;
 }
+.navigation-header{
+	font-weight: bold;
+}
+
+.bg-semi-dark{
+	background-color: #11163B !important;
+}
+
+.btn-primary{
+	box-shadow: 0 4px 15px -8px #7367f0;
+}
+.app-content{
+	background:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.3)),url(../../app-assets/images/fondito2.jpg) center center / cover;
+}

@@ -9,7 +9,7 @@
 $(document).ready(function () {
 
   var isRtl;
-  if ( $('html').attr('data-textdirection') == 'rtl' ) {
+  if ($('html').attr('data-textdirection') == 'rtl') {
     isRtl = true;
   } else {
     isRtl = false;
@@ -18,13 +18,13 @@ $(document).ready(function () {
   //  Rendering badge in status column
   var customBadgeHTML = function (params) {
     var color = "";
-    if (params.value == "active") {
-      color = "success"
+    if (params.value == "Administrador") {
+      color = "primary"
       return "<div class='badge badge-pill badge-light-" + color + "' >" + params.value + "</div>"
-    } else if (params.value == "blocked") {
-      color = "danger";
+    } else if (params.value == "Secretaria") {
+      color = "warning";
       return "<div class='badge badge-pill badge-light-" + color + "' >" + params.value + "</div>"
-    } else if (params.value == "deactivated") {
+    } else if (params.value == "Secretario") {
       color = "warning";
       return "<div class='badge badge-pill badge-light-" + color + "' >" + params.value + "</div>"
     }
@@ -74,77 +74,66 @@ $(document).ready(function () {
   /*** COLUMN DEFINE ***/
 
   var columnDefs = [{
-      headerName: 'ID',
-      field: 'id',
-      width: 125,
-      filter: true,
-      checkboxSelection: true,
-      headerCheckboxSelectionFilteredOnly: true,
-      headerCheckboxSelection: true,
-    },
-    {
-      headerName: 'Username',
-      field: 'username',
-      filter: true,
-      width: 175,
-      cellRenderer: customAvatarHTML,
-    },
-    {
-      headerName: 'Email',
-      field: 'email',
-      filter: true,
-      width: 225,
-    },
-    {
-      headerName: 'Name',
-      field: 'name',
-      filter: true,
-      width: 200,
-    },
-    {
-      headerName: 'Country',
-      field: 'country',
-      filter: true,
-      width: 150,
-    },
-    {
-      headerName: 'Role',
-      field: 'role',
-      filter: true,
-      width: 150,
-    },
-    {
-      headerName: 'Status',
-      field: 'status',
-      filter: true,
-      width: 150,
-      cellRenderer: customBadgeHTML,
-      cellStyle: {
-        "text-align": "center"
-      }
-    },
-    {
-      headerName: 'Verified',
-      field: 'is_verified',
-      filter: true,
-      width: 125,
-      cellRenderer: customBulletHTML,
-      cellStyle: {
-        "text-align": "center"
-      }
-    },
-    {
-      headerName: 'Department',
-      field: 'department',
-      filter: true,
-      width: 150,
-    },
-    {
-      headerName: 'Actions',
-      field: 'transactions',
-      width: 150,
-      cellRenderer: customIconsHTML,
+    headerName: 'ID',
+    field: 'id',
+    width: 125,
+    filter: true,
+  },
+  {
+    headerName: 'Usuario',
+    field: 'usuario',
+    filter: true,
+    width: 175
+  },
+  {
+    headerName: 'Nombre',
+    field: 'nombre',
+    filter: true,
+    width: 200,
+  },
+  {
+    headerName: 'Apellido',
+    field: 'apellido',
+    filter: true,
+    width: 200,
+  },
+  {
+    headerName: 'Sexo',
+    field: 'sexo',
+    filter: true,
+    width: 125
+  },
+  {
+    headerName: 'Edad',
+    field: 'edad',
+    filter: true,
+    width: 125
+  },
+  {
+    headerName: 'Cargo',
+    field: 'cargo',
+    filter: true,
+    width: 200,
+    cellRenderer: customBadgeHTML,
+    cellStyle: {
+      "text-align": "center"
     }
+  },
+  {
+    headerName: 'Departamento',
+    field: 'departamento',
+    filter: true,
+    width: 200,
+  },
+  {
+    headerName: 'Acciones',
+    field: 'acciones',
+    width: 125,
+    cellRenderer: customIconsHTML,
+    cellStyle: {
+      "text-align": "center"
+    }
+  }
   ];
 
   /*** GRID OPTIONS ***/
@@ -154,8 +143,8 @@ $(document).ready(function () {
     },
     enableRtl: isRtl,
     columnDefs: columnDefs,
-    rowSelection: "multiple",
-    floatingFilter: true,
+    rowSelection: "single",
+    // floatingFilter: true,
     filter: true,
     pagination: true,
     paginationPageSize: 20,
@@ -168,7 +157,7 @@ $(document).ready(function () {
     /*** DEFINED TABLE VARIABLE ***/
     var gridTable = document.getElementById("myGrid");
 
-    /*** GET TABLE DATA FROM URL ***/
+    /*** ponemos los datos del JSON en la tabla***/
     agGrid
       .simpleHttpRequest({
         url: "../../../app-assets/data/users-list.json"
@@ -194,7 +183,7 @@ $(document).ready(function () {
     $(".sort-dropdown .dropdown-item").on("click", function () {
       var $this = $(this);
       changePageSize($this.text());
-      $(".filter-btn").text("1 - " + $this.text() + " of 50");
+      $(".filter-btn").text("1 - " + $this.text() + " de 50");
     });
 
     /*** EXPORT AS CSV BTN ***/
