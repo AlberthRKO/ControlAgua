@@ -130,8 +130,8 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title"
                             data-i18n="User">Usuarios</span></a>
                     <ul class="menu-content">
-                        <li class="active"><a href="registroUser.html"><i class="feather icon-disc"></i><span
-                                    class="menu-item" data-i18n="registroUser">Registrar Usuario</span></a>
+                        <li><a href="registroUser.html"><i class="feather icon-disc"></i><span class="menu-item"
+                                    data-i18n="registroUser">Registrar Usuario</span></a>
                         </li>
                         <li><a href="listUser.html"><i class="feather icon-disc"></i><span class="menu-item"
                                     data-i18n="ListUser">Listar Usuarios</span></a>
@@ -176,8 +176,8 @@
                 <li class=" nav-item"><a href="#"><i class="feather icon-cpu"></i><span class="menu-title"
                             data-i18n="Medidor">Medidor</span></a>
                     <ul class="menu-content">
-                        <li><a href="registroMedidor.html"><i class="feather icon-disc"></i><span class="menu-item"
-                                    data-i18n="registroMedidor">Registrar Medidor</span></a>
+                        <li class="active"><a href="registroMedidor.html"><i class="feather icon-disc"></i><span
+                                    class="menu-item" data-i18n="registroMedidor">Registrar Medidor</span></a>
                         </li>
                         <li><a href="listMedidor.html"><i class="feather icon-disc"></i><span class="menu-item"
                                     data-i18n="ListMedidor">Listar Medidores</span></a>
@@ -234,118 +234,91 @@
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-lg-6">
-                                                <img src="app-assets/images/usuario.svg" alt="" class="img-fluid">
+                                                <img src="app-assets/images/medidor.svg" alt="" class="img-fluid">
                                             </div>
                                             <div class="col-lg-6">
                                                 <h4 class="h2 text-center mb-3">Registrar Usuario</h4>
                                                 <div class="row">
-                                                    <div class="col-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Usuario">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Usuario</label>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="password" class="form-control"
-                                                                id="iconLabelLeft" placeholder="Contraseña">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-lock"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Contraseña</label>
-                                                        </fieldset>
-                                                    </div>
-
                                                     <div class="col-md-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Nombres">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Nombres</label>
-                                                        </fieldset>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Apellidos">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Apellidos</label>
-                                                        </fieldset>
-                                                    </div>
-
-
-                                                    <div class="col-6 col-xl-4">
                                                         <div class="form-group">
-                                                            <select data-placeholder="Sexo"
+                                                            <select data-placeholder="N° de Medidor"
+                                                                class="select2 form-control">
+                                                                <option value="" disabled selected hidden>N° de Medidor
+                                                                </option>
+                                                                <option value="12345" data-icon="feather icon-cpu">
+                                                                    12345</option>
+                                                                <option value="32541" data-icon="feather icon-cpu">
+                                                                    32541</option>
+                                                                <option value="45231" data-icon="feather icon-cpu">
+                                                                    45231</option>
+                                                                <option value="13542" data-icon="feather icon-cpu">
+                                                                    13542</option>
+                                                                <option value="23154" data-icon="feather icon-cpu">
+                                                                    23154</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="text" class="form-control" id="iconLabelLeft"
+                                                                placeholder="Zona">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-home"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">Zona</label>
+                                                        </fieldset>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="text" class="form-control" id="iconLabelLeft"
+                                                                placeholder="Dirección">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-home"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">Dirección</label>
+                                                        </fieldset>
+                                                    </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select data-placeholder="Estado"
                                                                 class="select2-icons form-control" id="select2-icons1">
-                                                                <option value="" disabled selected hidden>Sexo
+                                                                <option value="" disabled selected hidden>Estado
                                                                 </option>
-                                                                <option value="masculino" data-icon="feather icon-user">
-                                                                    Masculino
+                                                                <option value="activo" data-icon="feather icon-check">
+                                                                    Activo
                                                                 </option>
-                                                                <option value="femenino" data-icon="feather icon-user">
-                                                                    Femenino
+                                                                <option value="suspendido"
+                                                                    data-icon="feather icon-alert-octagon">
+                                                                    Suspendido
                                                                 </option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-6 col-xl-4">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="number" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Edad" min="18" pattern="^[0-9]+">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user-check"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Edad</label>
-                                                        </fieldset>
-                                                    </div>
-                                                    <div class="col-6 col-xl-4 mx-auto">
-                                                        <div class="form-group">
-                                                            <select data-placeholder="Cargo"
-                                                                class="select2-icons form-control" id="select2-icons">
-                                                                <option value="" disabled selected hidden>Cargo
-                                                                </option>
-                                                                <option value="admin" data-icon="feather icon-server">
-                                                                    Administrador
-                                                                </option>
-                                                                <option value="secre" data-icon="feather icon-monitor">
-                                                                    Secretaria/o
+                                                                <option value="baneado"
+                                                                    data-icon="feather icon-x-square">
+                                                                    Baneado
                                                                 </option>
                                                             </select>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Departamento">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-airplay"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Departamento</label>
-                                                        </fieldset>
-                                                    </div>
-
-                                                    <div class="col-md-6 col-12">
                                                         <div class="form-group">
-
                                                             <input type='text' class="form-control pickadate"
                                                                 placeholder="Fecha de Ingreso" />
                                                         </div>
+
+
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <fieldset class="form-label-group">
+                                                            <textarea class="form-control" id="label-textarea" rows="3"
+                                                                placeholder="Descripción"></textarea>
+                                                            <label for="label-textarea">Descripción</label>
+                                                        </fieldset>
                                                     </div>
 
                                                     <div class="mx-auto mt-1"><button type="submit"

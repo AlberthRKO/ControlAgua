@@ -15,3 +15,12 @@
 .app-content{
 	background:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.3)),url(../../app-assets/images/fondito2.jpg) center center / cover;
 }
+
+@media (max-width: 575.98px){
+	.header-navbar.floating-nav {
+		margin-right: 1.8rem !important;
+	}
+	.ag-theme-material .ag-paging-panel{
+		padding: 0;
+	}
+}
