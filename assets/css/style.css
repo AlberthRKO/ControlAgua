@@ -24,3 +24,12 @@
 		padding: 0;
 	}
 }
+
+.btn-success{
+	background-color: #6ba957 !important;
+	box-shadow: 0 4px 15px -8px #6ba957;
+}
+.btn-danger{
+	background-color: #EA5455 !important;
+	box-shadow: 0 4px 15px -8px #EA5455;
+}

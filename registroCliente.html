@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -36,7 +36,6 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -239,6 +238,40 @@
                                             <div class="col-lg-6">
                                                 <h4 class="h2 text-center mb-3">Registrar Cliente</h4>
                                                 <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="number" class="form-control" id="iconLabelLeft"
+                                                                placeholder="N° de Cliente" min="1" pattern="^[0-9]+">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-user"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">N° de Cliente</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
+                                                        </fieldset>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="number" class="form-control" id="iconLabelLeft"
+                                                                placeholder="Carnet de Identidad" min="1"
+                                                                pattern="^[0-9]+">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-user"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">Carnet de Identidad</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
+                                                        </fieldset>
+                                                    </div>
+
                                                     <div class="col-md-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
@@ -248,6 +281,10 @@
                                                                 <i class="feather icon-user"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Nombres</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
@@ -260,21 +297,13 @@
                                                                 <i class="feather icon-user"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Apellidos</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
-
-                                                    <div class="col-md-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Carnet de Identidad">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Carnet de Identidad</label>
-                                                        </fieldset>
-                                                    </div>
                                                     <div class="col-md-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
@@ -284,10 +313,14 @@
                                                                 <i class="feather icon-home"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Dirección</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
-                                                    <div class="col-6 col-xl-4">
+                                                    <div class="col-md-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
                                                             <input type="number" class="form-control" id="iconLabelLeft"
@@ -296,10 +329,15 @@
                                                                 <i class="feather icon-edit-2"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">N° de Calle</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
-                                                    <div class="col-6 col-xl-4">
+
+                                                    <div class="col-md-6 col-xl-4">
                                                         <div class="form-group">
                                                             <select data-placeholder="Sexo"
                                                                 class="select2-icons form-control" id="select2-icons1">
@@ -312,10 +350,16 @@
                                                                     Femenino
                                                                 </option>
                                                             </select>
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione un
+                                                                sexo
+                                                            </p>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-6 col-xl-4 mx-auto">
+
+
+                                                    <div class="col-md-6 col-xl-4">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
                                                             <input type="number" class="form-control" id="iconLabelLeft"
@@ -324,6 +368,26 @@
                                                                 <i class="feather icon-phone"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Telefono</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
+                                                        </fieldset>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-xl-4 mx-auto">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="number" class="form-control" id="iconLabelLeft"
+                                                                placeholder="Pago registrado" min="1" pattern="^[0-9]+">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-dollar-sign"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">Pago registrado</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
@@ -331,7 +395,7 @@
                                                     <div class="col-12 d-flex justify-content-center">
                                                         <div class="mx-auto mt-1"><button type="submit"
                                                                 class="btn btn-primary btn-inline"
-                                                                id="type-success">Registrar</button>
+                                                                id="guardar">Registrar</button>
                                                         </div>
                                                     </div>
 
@@ -377,7 +441,7 @@
     <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <!-- BEGIN: Page Vendor JS-->
     <!-- END: Page Vendor JS-->
 
@@ -391,7 +455,7 @@
     <!-- <script src="app-assets/js/scripts/forms/form-tooltip-valid.js"></script> -->
     <script src="app-assets/js/scripts/forms/select/form-select2.js"></script>
     <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
-    <script src="app-assets/js/scripts/extensions/toastr.js"></script>
+    <script src="app-assets/js/scripts/extensions/sweet-alerts.js"></script>
     <!-- END: Page JS-->
 
 </body>

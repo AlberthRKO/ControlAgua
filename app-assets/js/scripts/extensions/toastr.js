@@ -12,6 +12,9 @@ $(document).ready(function () {
   $('#type-success').on('click', function () {
     toastr.success('El registro se ha guardado de forma correcta!', 'Registro Exitoso !');
   });
+  $('#type-success2').on('click', function () {
+    toastr.success('El registro se ha editado de forma correcta!', 'Registro Editado !');
+  });
 
   // Info Type
   $('#type-info').on('click', function () {

@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -36,7 +36,6 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -237,26 +236,45 @@
                                                 <img src="app-assets/images/medidor.svg" alt="" class="img-fluid">
                                             </div>
                                             <div class="col-lg-6">
-                                                <h4 class="h2 text-center mb-3">Registrar Usuario</h4>
+                                                <h4 class="h2 text-center mb-3">Registrar Medidor</h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <select data-placeholder="N° de Medidor"
+                                                            <select data-placeholder="N° de Cliente"
                                                                 class="select2 form-control">
-                                                                <option value="" disabled selected hidden>N° de Medidor
+                                                                <option value="" disabled selected hidden>N° de Cliente
                                                                 </option>
-                                                                <option value="12345" data-icon="feather icon-cpu">
+                                                                <option value="12345">
                                                                     12345</option>
-                                                                <option value="32541" data-icon="feather icon-cpu">
+                                                                <option value="32541">
                                                                     32541</option>
-                                                                <option value="45231" data-icon="feather icon-cpu">
+                                                                <option value="45231">
                                                                     45231</option>
-                                                                <option value="13542" data-icon="feather icon-cpu">
+                                                                <option value="13542">
                                                                     13542</option>
-                                                                <option value="23154" data-icon="feather icon-cpu">
+                                                                <option value="23154">
                                                                     23154</option>
                                                             </select>
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione un
+                                                                Cliente
+                                                            </p>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <fieldset
+                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                            <input type="number" class="form-control" id="iconLabelLeft"
+                                                                placeholder="N° de Medidor" min="18" pattern="^[0-9]+">
+                                                            <div class="form-control-position">
+                                                                <i class="feather icon-cpu"></i>
+                                                            </div>
+                                                            <label for="iconLabelLeft">N° de Medidor</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
+                                                        </fieldset>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <fieldset
@@ -267,10 +285,14 @@
                                                                 <i class="feather icon-home"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Zona</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
-                                                    <div class="col-12">
+                                                    <div class="col-md-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
                                                             <input type="text" class="form-control" id="iconLabelLeft"
@@ -279,6 +301,10 @@
                                                                 <i class="feather icon-home"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Dirección</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
@@ -289,8 +315,8 @@
                                                                 class="select2-icons form-control" id="select2-icons1">
                                                                 <option value="" disabled selected hidden>Estado
                                                                 </option>
-                                                                <option value="activo" data-icon="feather icon-check">
-                                                                    Activo
+                                                                <option value="servicio" data-icon="feather icon-check">
+                                                                    En servicio
                                                                 </option>
                                                                 <option value="suspendido"
                                                                     data-icon="feather icon-alert-octagon">
@@ -298,9 +324,13 @@
                                                                 </option>
                                                                 <option value="baneado"
                                                                     data-icon="feather icon-x-square">
-                                                                    Baneado
+                                                                    Dado de Baja
                                                                 </option>
                                                             </select>
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione un
+                                                                estado
+                                                            </p>
                                                         </div>
                                                     </div>
 
@@ -308,6 +338,10 @@
                                                         <div class="form-group">
                                                             <input type='text' class="form-control pickadate"
                                                                 placeholder="Fecha de Ingreso" />
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione
+                                                                una fecha
+                                                            </p>
                                                         </div>
 
 
@@ -323,7 +357,7 @@
 
                                                     <div class="mx-auto mt-1"><button type="submit"
                                                             class="btn btn-primary btn-inline"
-                                                            id="type-success">Registrar</button>
+                                                            id="guardar">Registrar</button>
                                                     </div>
 
                                                 </div>
@@ -367,7 +401,7 @@
     <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <!-- BEGIN: Page Vendor JS-->
     <!-- END: Page Vendor JS-->
 
@@ -381,7 +415,7 @@
     <!-- <script src="app-assets/js/scripts/forms/form-tooltip-valid.js"></script> -->
     <script src="app-assets/js/scripts/forms/select/form-select2.js"></script>
     <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
-    <script src="app-assets/js/scripts/extensions/toastr.js"></script>
+    <script src="app-assets/js/scripts/extensions/sweet-alerts.js"></script>
     <!-- END: Page JS-->
 
 </body>

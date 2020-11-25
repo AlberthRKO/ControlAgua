@@ -1,11 +1,4 @@
-/*=========================================================================================
-    File Name: app-user.js
-    Description: User page
-    --------------------------------------------------------------------------------------
-    Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-    Author: PIXINVENT
-    Author URL: http://www.themeforest.net/user/pixinvent
-==========================================================================================*/
+
 $(document).ready(function () {
 
   var isRtl;
@@ -45,23 +38,24 @@ $(document).ready(function () {
   // Renering Icons in Actions column
   var customIconsHTML = function (params) {
     var usersIcons = document.createElement("span");
-    var editIconHTML = "<a href='app-user-edit.html'><i class= 'users-edit-icon feather icon-edit-1 mr-50'></i></a>"
-    var deleteIconHTML = document.createElement('i');
-    var attr = document.createAttribute("class")
-    attr.value = "users-delete-icon feather icon-trash-2"
-    deleteIconHTML.setAttributeNode(attr);
-    // selected row delete functionality
-    deleteIconHTML.addEventListener("click", function () {
-      deleteArr = [
-        params.data
-      ];
-      // var selectedData = gridOptions.api.getSelectedRows();
-      gridOptions.api.updateRowData({
-        remove: deleteArr
-      });
-    });
+    var editIconHTML = "<a href='#' data-toggle='modal' data-target='#editarUsuario'><i class= 'users-edit-icon text-primary feather icon-edit-1 mr-50'></i></a>"
+    var deleteIconHTML = "<a href='#' data-toggle='modal' data-target='#eliminarUsuario'><i class= 'users-delete-icon text-danger feather icon-trash-2'></i></a>"
+    // var deleteIconHTML = document.createElement('i');
+    // var attr = document.createAttribute("class")
+    // attr.value = "users-delete-icon feather icon-trash-2"
+    // deleteIconHTML.setAttributeNode(attr);
+    // // selected row delete functionality
+    // deleteIconHTML.addEventListener("click", function () {
+    //   deleteArr = [
+    //     params.data
+    //   ];
+    //   // var selectedData = gridOptions.api.getSelectedRows();
+    //   gridOptions.api.updateRowData({
+    //     remove: deleteArr
+    //   });
+    // });
     usersIcons.appendChild($.parseHTML(editIconHTML)[0]);
-    usersIcons.appendChild(deleteIconHTML);
+    usersIcons.appendChild($.parseHTML(deleteIconHTML)[0]);
     return usersIcons
   }
 
@@ -160,7 +154,7 @@ $(document).ready(function () {
     /*** ponemos los datos del JSON en la tabla***/
     agGrid
       .simpleHttpRequest({
-        url: "../../../app-assets/data/users-list.json"
+        url: "/app-assets/data/users-list.json"
       })
       .then(function (data) {
         gridOptions.api.setRowData(data);

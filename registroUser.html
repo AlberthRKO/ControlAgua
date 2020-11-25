@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -36,7 +36,6 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/toastr.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -239,7 +238,7 @@
                                             <div class="col-lg-6">
                                                 <h4 class="h2 text-center mb-3">Registrar Usuario</h4>
                                                 <div class="row">
-                                                    <div class="col-6">
+                                                    <div class="col-sm-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
                                                             <input type="text" class="form-control" id="iconLabelLeft"
@@ -248,9 +247,13 @@
                                                                 <i class="feather icon-user"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Usuario</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-sm-6">
                                                         <fieldset
                                                             class="form-label-group form-group position-relative has-icon-left">
                                                             <input type="password" class="form-control"
@@ -259,6 +262,10 @@
                                                                 <i class="feather icon-lock"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Contraseña</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
@@ -271,6 +278,10 @@
                                                                 <i class="feather icon-user"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Nombres</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
@@ -283,11 +294,15 @@
                                                                 <i class="feather icon-user"></i>
                                                             </div>
                                                             <label for="iconLabelLeft">Apellidos</label>
+                                                            <p class="text-danger small d-none m-0"><i
+                                                                    class="feather icon-alert-circle"></i> El campo no
+                                                                debe estar vacio
+                                                            </p>
                                                         </fieldset>
                                                     </div>
 
 
-                                                    <div class="col-6 col-xl-4">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <select data-placeholder="Sexo"
                                                                 class="select2-icons form-control" id="select2-icons1">
@@ -300,20 +315,26 @@
                                                                     Femenino
                                                                 </option>
                                                             </select>
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione un
+                                                                sexo
+                                                            </p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-6 col-xl-4">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="number" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Edad" min="18" pattern="^[0-9]+">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-user-check"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Edad</label>
-                                                        </fieldset>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input type='text'
+                                                                class="form-control pickadate-months-year"
+                                                                placeholder="Fecha de Nacimiento" />
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione
+                                                                una fecha
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-6 col-xl-4 mx-auto">
+
+                                                    <div class="col-md-6 mx-auto">
                                                         <div class="form-group">
                                                             <select data-placeholder="Cargo"
                                                                 class="select2-icons form-control" id="select2-icons">
@@ -325,32 +346,34 @@
                                                                 <option value="secre" data-icon="feather icon-monitor">
                                                                     Secretaria/o
                                                                 </option>
+                                                                <option value="lector"
+                                                                    data-icon="feather icon-file-text">
+                                                                    Lector
+                                                                </option>
                                                             </select>
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione un
+                                                                cargo
+                                                            </p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <fieldset
-                                                            class="form-label-group form-group position-relative has-icon-left">
-                                                            <input type="text" class="form-control" id="iconLabelLeft"
-                                                                placeholder="Departamento">
-                                                            <div class="form-control-position">
-                                                                <i class="feather icon-airplay"></i>
-                                                            </div>
-                                                            <label for="iconLabelLeft">Departamento</label>
-                                                        </fieldset>
-                                                    </div>
 
-                                                    <div class="col-md-6 col-12">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
 
                                                             <input type='text' class="form-control pickadate"
                                                                 placeholder="Fecha de Ingreso" />
+                                                            <p class="text-danger small d-none"><i
+                                                                    class="feather icon-alert-circle"></i> Seleccione
+                                                                una fecha
+                                                            </p>
                                                         </div>
+
                                                     </div>
 
                                                     <div class="mx-auto mt-1"><button type="submit"
                                                             class="btn btn-primary btn-inline"
-                                                            id="type-success">Registrar</button>
+                                                            id="guardar">Registrar</button>
                                                     </div>
 
                                                 </div>
@@ -394,7 +417,7 @@
     <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
     <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <!-- BEGIN: Page Vendor JS-->
     <!-- END: Page Vendor JS-->
 
@@ -408,7 +431,7 @@
     <!-- <script src="app-assets/js/scripts/forms/form-tooltip-valid.js"></script> -->
     <script src="app-assets/js/scripts/forms/select/form-select2.js"></script>
     <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
-    <script src="app-assets/js/scripts/extensions/toastr.js"></script>
+    <script src="app-assets/js/scripts/extensions/sweet-alerts.js"></script>
     <!-- END: Page JS-->
 
 </body>

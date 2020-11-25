@@ -1,10 +1,10 @@
 /*=========================================================================================
-	File Name: sweet-alerts.js
-	Description: A beautiful replacement for javascript alerts
-	----------------------------------------------------------------------------------------
-	Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
-	Author: Pixinvent
-	Author URL: hhttp://www.themeforest.net/user/pixinvent
+  File Name: sweet-alerts.js
+  Description: A beautiful replacement for javascript alerts
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuexy  - Vuejs, HTML & Laravel Admin Dashboard Template
+  Author: Pixinvent
+  Author URL: hhttp://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 $(document).ready(function () {
 
@@ -355,15 +355,16 @@ $(document).ready(function () {
     })
   });
 
-  $('#confirm-color').on('click', function () {
+  $('#eliminarRegistro').on('click', function () {
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: '¿Estas Seguro?',
+      text: "¡No podras revertir esto!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar',
       confirmButtonClass: 'btn btn-primary',
       cancelButtonClass: 'btn btn-danger ml-1',
       buttonsStyling: false,
@@ -371,20 +372,40 @@ $(document).ready(function () {
       if (result.value) {
         Swal.fire({
           type: "success",
-          title: 'Deleted!',
-          text: 'Your file has been deleted.',
+          title: 'Eliminado',
+          text: 'El registro fue eliminado',
           confirmButtonClass: 'btn btn-success',
         })
       }
       else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
-          title: 'Cancelled',
-          text: 'Your imaginary file is safe :)',
+          title: 'Cancelado',
+          text: 'Registro salvado',
           type: 'error',
           confirmButtonClass: 'btn btn-success',
         })
       }
     })
   });
+
+  $('#guardar').on('click', function () {
+    Swal.fire({
+      type: 'success',
+      title: 'Guardado',
+      text: 'El registro fue guardado',
+      confirmButtonClass: 'btn btn-success',
+      buttonsStyling: false,
+    })
+  })
+  $('#eliminar').on('click', function () {
+    Swal.fire({
+      type: "success",
+      title: 'Eliminado',
+      text: 'El registro fue eliminado',
+      confirmButtonClass: 'btn btn-success',
+      buttonsStyling: false,
+    })
+  })
+
 
 });

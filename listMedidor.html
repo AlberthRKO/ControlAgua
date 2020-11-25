@@ -140,8 +140,8 @@
                         <li><a href="registroUser.html"><i class="feather icon-disc"></i><span class="menu-item"
                                     data-i18n="registroUser">Registrar Usuario</span></a>
                         </li>
-                        <li class="active"><a href="listUser.html"><i class="feather icon-disc"></i><span
-                                    class="menu-item" data-i18n="ListUser">Listar Usuarios</span></a>
+                        <li><a href="listUser.html"><i class="feather icon-disc"></i><span class="menu-item"
+                                    data-i18n="ListUser">Listar Usuarios</span></a>
                         </li>
                     </ul>
                 </li>
@@ -186,8 +186,8 @@
                         <li><a href="registroMedidor.html"><i class="feather icon-disc"></i><span class="menu-item"
                                     data-i18n="registroMedidor">Registrar Medidor</span></a>
                         </li>
-                        <li><a href="listMedidor.html"><i class="feather icon-disc"></i><span class="menu-item"
-                                    data-i18n="ListMedidor">Listar Medidores</span></a>
+                        <li class="active"><a href="listMedidor.html"><i class="feather icon-disc"></i><span
+                                    class="menu-item" data-i18n="ListMedidor">Listar Medidores</span></a>
                         </li>
                     </ul>
                 </li>
@@ -275,16 +275,20 @@
                                     </div>
                                     <div id="myGrid" class="aggrid ag-theme-material"></div>
 
+                                    <!-- Modal edit -->
+
+
+
 
                                     <div class="modal-primary mr-1 mb-1 d-inline-block">
                                         <!-- Modal -->
-                                        <div class="modal fade text-left" id="editarUsuario" tabindex="-1" role="dialog"
+                                        <div class="modal fade text-left" id="editarMedidor" tabindex="-1" role="dialog"
                                             aria-labelledby="myModalLabel160" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header bg-primary white">
                                                         <h5 class="modal-title" id="myModalLabel160">Editar
-                                                            Usuario</h5>
+                                                            Medidor</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -292,15 +296,41 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="row mt-2">
-                                                            <div class="col-sm-6">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <select data-placeholder="N° de Cliente"
+                                                                        class="select2 form-control">
+                                                                        <option value="" disabled selected hidden>N° de
+                                                                            Cliente
+                                                                        </option>
+                                                                        <option value="12345">
+                                                                            12345</option>
+                                                                        <option value="32541">
+                                                                            32541</option>
+                                                                        <option value="45231">
+                                                                            45231</option>
+                                                                        <option value="13542">
+                                                                            13542</option>
+                                                                        <option value="23154">
+                                                                            23154</option>
+                                                                    </select>
+                                                                    <p class="text-danger small d-none"><i
+                                                                            class="feather icon-alert-circle"></i>
+                                                                        Seleccione un
+                                                                        Cliente
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
                                                                 <fieldset
                                                                     class="form-label-group form-group position-relative has-icon-left">
-                                                                    <input type="text" class="form-control"
-                                                                        id="iconLabelLeft" placeholder="Usuario">
+                                                                    <input type="number" class="form-control"
+                                                                        id="iconLabelLeft" placeholder="N° de Medidor"
+                                                                        min="18" pattern="^[0-9]+">
                                                                     <div class="form-control-position">
-                                                                        <i class="feather icon-user"></i>
+                                                                        <i class="feather icon-cpu"></i>
                                                                     </div>
-                                                                    <label for="iconLabelLeft">Usuario</label>
+                                                                    <label for="iconLabelLeft">N° de Medidor</label>
                                                                     <p class="text-danger small d-none m-0"><i
                                                                             class="feather icon-alert-circle"></i> El
                                                                         campo no
@@ -308,15 +338,15 @@
                                                                     </p>
                                                                 </fieldset>
                                                             </div>
-                                                            <div class="col-sm-6">
+                                                            <div class="col-md-6">
                                                                 <fieldset
                                                                     class="form-label-group form-group position-relative has-icon-left">
-                                                                    <input type="password" class="form-control"
-                                                                        id="iconLabelLeft" placeholder="Contraseña">
+                                                                    <input type="text" class="form-control"
+                                                                        id="iconLabelLeft" placeholder="Zona">
                                                                     <div class="form-control-position">
-                                                                        <i class="feather icon-lock"></i>
+                                                                        <i class="feather icon-home"></i>
                                                                     </div>
-                                                                    <label for="iconLabelLeft">Contraseña</label>
+                                                                    <label for="iconLabelLeft">Zona</label>
                                                                     <p class="text-danger small d-none m-0"><i
                                                                             class="feather icon-alert-circle"></i> El
                                                                         campo no
@@ -329,28 +359,11 @@
                                                                 <fieldset
                                                                     class="form-label-group form-group position-relative has-icon-left">
                                                                     <input type="text" class="form-control"
-                                                                        id="iconLabelLeft" placeholder="Nombres">
+                                                                        id="iconLabelLeft" placeholder="Dirección">
                                                                     <div class="form-control-position">
-                                                                        <i class="feather icon-user"></i>
+                                                                        <i class="feather icon-home"></i>
                                                                     </div>
-                                                                    <label for="iconLabelLeft">Nombres</label>
-                                                                    <p class="text-danger small d-none m-0"><i
-                                                                            class="feather icon-alert-circle"></i> El
-                                                                        campo no
-                                                                        debe estar vacio
-                                                                    </p>
-                                                                </fieldset>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <fieldset
-                                                                    class="form-label-group form-group position-relative has-icon-left">
-                                                                    <input type="text" class="form-control"
-                                                                        id="iconLabelLeft" placeholder="Apellidos">
-                                                                    <div class="form-control-position">
-                                                                        <i class="feather icon-user"></i>
-                                                                    </div>
-                                                                    <label for="iconLabelLeft">Apellidos</label>
+                                                                    <label for="iconLabelLeft">Dirección</label>
                                                                     <p class="text-danger small d-none m-0"><i
                                                                             class="feather icon-alert-circle"></i> El
                                                                         campo no
@@ -362,72 +375,34 @@
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <select data-placeholder="Sexo"
+                                                                    <select data-placeholder="Estado"
                                                                         class="select2-icons form-control"
                                                                         id="select2-icons1">
-                                                                        <option value="" disabled selected hidden>Sexo
+                                                                        <option value="" disabled selected hidden>Estado
                                                                         </option>
-                                                                        <option value="masculino"
-                                                                            data-icon="feather icon-user">
-                                                                            Masculino
+                                                                        <option value="servicio"
+                                                                            data-icon="feather icon-check">
+                                                                            En servicio
                                                                         </option>
-                                                                        <option value="femenino"
-                                                                            data-icon="feather icon-user">
-                                                                            Femenino
+                                                                        <option value="suspendido"
+                                                                            data-icon="feather icon-alert-octagon">
+                                                                            Suspendido
+                                                                        </option>
+                                                                        <option value="baneado"
+                                                                            data-icon="feather icon-x-square">
+                                                                            Dado de Baja
                                                                         </option>
                                                                     </select>
                                                                     <p class="text-danger small d-none"><i
                                                                             class="feather icon-alert-circle"></i>
                                                                         Seleccione un
-                                                                        sexo
+                                                                        estado
                                                                     </p>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type='text'
-                                                                        class="form-control pickadate-months-year"
-                                                                        placeholder="Fecha de Nacimiento" />
-                                                                    <p class="text-danger small d-none"><i
-                                                                            class="feather icon-alert-circle"></i>
-                                                                        Seleccione
-                                                                        una fecha
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6 mx-auto">
-                                                                <div class="form-group">
-                                                                    <select data-placeholder="Cargo"
-                                                                        class="select2-icons form-control"
-                                                                        id="select2-icons">
-                                                                        <option value="" disabled selected hidden>Cargo
-                                                                        </option>
-                                                                        <option value="admin"
-                                                                            data-icon="feather icon-server">
-                                                                            Administrador
-                                                                        </option>
-                                                                        <option value="secre"
-                                                                            data-icon="feather icon-monitor">
-                                                                            Secretaria/o
-                                                                        </option>
-                                                                        <option value="lector"
-                                                                            data-icon="feather icon-file-text">
-                                                                            Lector
-                                                                        </option>
-                                                                    </select>
-                                                                    <p class="text-danger small d-none"><i
-                                                                            class="feather icon-alert-circle"></i>
-                                                                        Seleccione un
-                                                                        cargo
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-
                                                                     <input type='text' class="form-control pickadate"
                                                                         placeholder="Fecha de Ingreso" />
                                                                     <p class="text-danger small d-none"><i
@@ -437,29 +412,36 @@
                                                                     </p>
                                                                 </div>
 
+
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <fieldset class="form-label-group">
+                                                                    <textarea class="form-control" id="label-textarea"
+                                                                        rows="3" placeholder="Descripción"></textarea>
+                                                                    <label for="label-textarea">Descripción</label>
+                                                                </fieldset>
                                                             </div>
 
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer mx-auto mb-1">
-                                                        <button type="button" class="btn btn-primary"
-                                                            data-dismiss="modal" id="guardar">Guardar</button>
+                                                        <button type="button" class="btn btn-primary" id="guardar"
+                                                            data-dismiss="modal">Guardar</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="modal-primary mr-1 mb-1 d-inline-block">
                                         <!-- Modal -->
-                                        <div class="modal fade text-left" id="eliminarUsuario" tabindex="-1"
+                                        <div class="modal fade text-left" id="eliminarMedidor" tabindex="-1"
                                             role="dialog" aria-labelledby="myModalLabel160" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header bg-danger white">
                                                         <h5 class="modal-title" id="myModalLabel160">Eliminar
-                                                            Usuario</h5>
+                                                            Medidor</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -467,7 +449,7 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <h5 class="text-center">¿Estas seguro que desea eliminar el
-                                                            el usuario?</h5>
+                                                            medidor?</h5>
                                                     </div>
                                                     <div class="modal-footer mx-auto mb-1">
                                                         <button type="button" class="btn btn-danger" id="eliminar"
@@ -477,8 +459,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -530,7 +510,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="app-assets/data/listas/app-user.js"></script>
+    <script src="app-assets/data/listas/app-medidor.js"></script>
     <script src="app-assets/js/scripts/forms/select/form-select2.js"></script>
     <script src="app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
     <script src="app-assets/js/scripts/modal/components-modal.js"></script>

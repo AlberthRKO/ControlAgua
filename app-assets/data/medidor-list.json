@@ -1,0 +1,38 @@
+[
+  {
+    "nMedidor": 13245,
+    "nCliente": "12344",
+    "zona": "Mercado Morro",
+    "direccion": "Junin 55",
+    "estado": "En Servicio",
+    "fechaIngreso": "2000-01-01",
+    "descripcion": "Medidor en buen estado sin fallas"
+  },
+  {
+    "nMedidor": 13245,
+    "nCliente": "12344",
+    "zona": "Mercado Morro",
+    "direccion": "Junin 55",
+    "estado": "Dado de Baja",
+    "fechaIngreso": "2000-01-01",
+    "descripcion": "Medidor en buen estado sin fallas"
+  },
+  {
+    "nMedidor": 13245,
+    "nCliente": "12344",
+    "zona": "Mercado Morro",
+    "direccion": "Junin 55",
+    "estado": "Suspendido",
+    "fechaIngreso": "2000-01-01",
+    "descripcion": "Medidor en buen estado sin fallas"
+  },
+  {
+    "nMedidor": 13245,
+    "nCliente": "12344",
+    "zona": "Mercado Morro",
+    "direccion": "Junin 55",
+    "estado": "En Servicio",
+    "fechaIngreso": "2000-01-01",
+    "descripcion": "Medidor en buen estado sin fallas"
+  }
+]
