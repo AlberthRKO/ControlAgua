@@ -2,11 +2,11 @@
         DARK LAYOUT
 =========================================================*/
 .dropzone {
-  min-height: 350px;
+  min-height: 150px;
   border: 2px dashed #7367f0;
   background: #f8f8f8; }
   .dropzone .dz-message {
-    font-size: 2rem;
+    font-size: 1.2rem;
     position: absolute;
     top: 50%;
     left: 0;
@@ -18,9 +18,9 @@
   .dropzone .dz-message:before {
     content: "\e864";
     font-family: 'feather';
-    font-size: 80px;
+    font-size: 25px;
     position: absolute;
-    top: 48px;
+    top: 28px;
     width: 80px;
     height: 80px;
     display: inline-block;
@@ -57,6 +57,4 @@
       text-decoration: none;
       color: #e42728; }
 
-@media (max-width: 576px) {
-  .dropzone .dz-message:before {
-    top: 7.14rem; } }
+
